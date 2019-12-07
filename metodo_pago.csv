@@ -1,0 +1,4 @@
+id,nombre,descripcion
+01,tarjeta de debito, tarjeta fisica
+02,tarjeta de credito, tarjeta fisica
+03,cryptomoneda, moneda virtual

@@ -1,0 +1,6 @@
+id,tipo,padre,es_hoja
+01,Deporte,, 0
+02, Futbol, 01, 1
+03, Futbol Americano, 02, 1
+04, Futbol de Playa, 02, 0
+05, Tenis,01,0
