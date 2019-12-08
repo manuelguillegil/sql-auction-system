@@ -5,6 +5,7 @@ CREATE OR REPLACE FUNCTION updateFinishDate() RETURNS TRIGGER AS $updateFinishDa
     nuevaFecha Timestamp;
     fechaLimite Timestamp;
     fechaBid Timestamp;
+    timeToEnd Timestamp;
   BEGIN
     IF (TG_OP = 'INSERT' OR TG_OP = 'UPDATE' ) THEN
       FOR temprow IN
@@ -18,7 +19,7 @@ CREATE OR REPLACE FUNCTION updateFinishDate() RETURNS TRIGGER AS $updateFinishDa
                 UPDATE Subasta
                 SET fecha_fin = fecha_fin + fecha_limite
                 WHERE Subasta.id = temprow.id;
-              END IF
+              END IF;
           END LOOP;
     END IF;
     RETURN NEW;

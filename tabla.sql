@@ -139,6 +139,11 @@ ALTER TABLE Bid
     REFERENCES Usuario(id)
     ON DELETE SET NULL; 
 
+\i triggersAddBid.sql;
+\i triggersCheckHoja.sql;
+\i triggersUpdateFinishDate.sql;
+\i triggersUpdateHojaPadre.sql;
+
 \COPY Usuario FROM 'usuarios.csv' WITH DELIMITER ',' CSV HEADER;
 \COPY Categoria FROM 'categoria.csv' WITH DELIMITER ',' CSV HEADER;
 \COPY Metodo_Pago FROM 'metodo_pago.csv' WITH DELIMITER ',' CSV HEADER;
