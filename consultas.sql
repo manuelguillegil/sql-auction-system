@@ -1,3 +1,4 @@
+-- PREGUNTA 4
 -- Cuantas subastas se realizan por mes po categoria
 SELECT date_trunc('month', b.fecha) AS mes, COUNT(ca.categoria), c.tipo
     FROM bid AS b
@@ -8,7 +9,7 @@ SELECT date_trunc('month', b.fecha) AS mes, COUNT(ca.categoria), c.tipo
 
 -- Pregunta 3
 -- Nuestra  solucion parte desde la vision de que con dos query
--- podemso resolver d eigual manera el mismo problema de una forma
+-- podemos resolver de igual manera el mismo problema de una forma
 -- menos confusa utilizando los parametros dados en clase
  
 -- Query number 1
