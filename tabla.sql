@@ -7,7 +7,7 @@
 --			Maria Fernanda Machado      13-10780
 --
 -------------------------------------------------------------------------
--- psql sistema_subasta < /home/manuelguillegil/Development/auction-system/tabla.sql
+-- psql sistema_subasta < /home/edwar/usb/bases-mafer/sistema-subasta/tabla.sql
 DROP TABLE IF EXISTS Categoria_Producto;
 DROP TABLE IF EXISTS Bid;
 DROP TABLE IF EXISTS Subasta;
@@ -80,7 +80,7 @@ CREATE TABLE Subasta (
     precio_actual       Integer,
     producto            Integer,
     monto_minimo        Integer, -- Atributo que define el monto minimo que debe tener un bid para aumentar un precio
-    fecha_limite        Timestamp -- Atributo que define el límite a considerar para actualizar la fecha de finalizacion de la subasta
+    fecha_limite        INTERVAL -- Atributo que define el límite a considerar para actualizar la fecha de finalizacion de la subasta
 );
 
 /* -- Importamos el archivo cvs a la tabla creada
