@@ -21,3 +21,7 @@ id,tipo,padre,es_hoja
 20,Comida,,0
 21,Humano,20,1
 22,Animales,20,1
+23,Higiene,,0
+24,Shampoo,20,1
+25,Acondicionador,20,1
+26,jabon,20,1
