@@ -1,10 +1,9 @@
 -- PREGUNTA 4
--- Cuantas subastas se realizan por mes po categoria
-SELECT date_trunc('month', b.fecha) AS mes, COUNT(ca.categoria), c.tipo
-    FROM bid AS b
-    JOIN subasta AS s ON b.subasta = s.id 
-    JOIN categoria_producto AS ca ON ca.producto = s.producto 
-    JOIN categoria AS c ON ca.categoria = c.id WHERE b.fecha <= '2019-12-31'
+-- Cuantas subastas se realizan por mes por categoria
+SELECT date_trunc('month', b.fecha_ini) AS mes, COUNT(ca.categoria), c.tipo
+    FROM subasta AS b
+    JOIN categoria_producto AS ca ON ca.producto = b.producto 
+    JOIN categoria AS c ON ca.categoria = c.id WHERE b.fecha_ini <= '2019-12-31'
     GROUP BY 1, c.tipo;
 
 -- Pregunta 3
@@ -16,6 +15,7 @@ SELECT date_trunc('month', b.fecha) AS mes, COUNT(ca.categoria), c.tipo
 -- Este query responde a la tarea de conseguir todas las categorias que tienen
 -- un promedio de 'precio_actual' mayor al de la tabla general subasta y
 -- tengan un valor 'precio_base' mayor a $ 1
+-- Lo que sale como total al finalizar las tablas es el promedio de la tabla completa 
  
 SELECT *
 FROM (
