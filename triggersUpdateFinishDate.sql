@@ -13,9 +13,9 @@ CREATE OR REPLACE FUNCTION updateFinishDate() RETURNS TRIGGER AS $updateFinishDa
         FROM Subasta AS s
         WHERE s.id = NEW.subasta
           LOOP
-            timeToEnd = now()::timestamp - subasta.fecha_fin;
+            timeToEnd = now()::timestamp - temprow.fecha_fin;
 
-              IF (timeToEnd <= subasta.fecha_fin) THEN
+              IF (timeToEnd <= temprow.fecha_fin) THEN
                 UPDATE Subasta
                 SET fecha_fin = fecha_fin + fecha_limite
                 WHERE Subasta.id = temprow.id;
