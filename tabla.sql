@@ -7,7 +7,7 @@
 --			Maria Fernanda Machado      13-10780
 --
 -------------------------------------------------------------------------
--- psql sistema_subasta < /home/manuelguillegil/Development/auction-system/tabla.sql
+-- psql sistema_subasta < /home/edwar/usb/bases-mafer/sistema-subasta/tabla.sql
 DROP TABLE IF EXISTS Categoria_Producto;
 DROP TABLE IF EXISTS Bid;
 DROP TABLE IF EXISTS Subasta;
@@ -80,7 +80,7 @@ CREATE TABLE Subasta (
     precio_actual       Integer,
     producto            Integer,
     monto_minimo        Integer, -- Atributo que define el monto minimo que debe tener un bid para aumentar un precio
-    fecha_limite        Timestamp -- Atributo que define el límite a considerar para actualizar la fecha de finalizacion de la subasta
+    fecha_limite        INTERVAL -- Atributo que define el límite a considerar para actualizar la fecha de finalizacion de la subasta
 );
 
 /* -- Importamos el archivo cvs a la tabla creada
@@ -143,19 +143,19 @@ ALTER TABLE Bid
     REFERENCES Usuario(id)
     ON DELETE SET NULL; 
 
-\i '/home/manuelguillegil/Development/auction-system/triggersAddBid.sql'
-\i '/home/manuelguillegil/Development/auction-system/triggersCheckHoja.sql'
-\i '/home/manuelguillegil/Development/auction-system/triggersUpdateHojaPadre.sql'
-\i '/home/manuelguillegil/Development/auction-system/triggerUpdateFinishDate.sql'
+\i '/home/edwar/usb/bases-mafer/sistema-subasta/triggersAddBid.sql'
+\i '/home/edwar/usb/bases-mafer/sistema-subasta/triggersCheckHoja.sql'
+\i '/home/edwar/usb/bases-mafer/sistema-subasta/triggersUpdateHojaPadre.sql'
+\i '/home/edwar/usb/bases-mafer/sistema-subasta/triggerUpdateFinishDate.sql'
 
-\COPY Usuario FROM '/home/manuelguillegil/Development/auction-system/usuarios.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Categoria FROM '/home/manuelguillegil/Development/auction-system/categoria.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Metodo_Pago FROM '/home/manuelguillegil/Development/auction-system/metodo_pago.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Metodo_Pago_Usuario FROM '/home/manuelguillegil/Development/auction-system/metodo_pago_usuario.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Producto FROM '/home/manuelguillegil/Development/auction-system/producto.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Categoria_Producto FROM '/home/manuelguillegil/Development/auction-system/categoria_producto.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Subasta FROM '/home/manuelguillegil/Development/auction-system/subasta.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Bid FROM '/home/manuelguillegil/Development/auction-system/bid.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Usuario FROM '/home/edwar/usb/bases-mafer/sistema-subasta/usuarios.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Categoria FROM '/home/edwar/usb/bases-mafer/sistema-subasta/categoria.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Metodo_Pago FROM '/home/edwar/usb/bases-mafer/sistema-subasta/metodo_pago.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Metodo_Pago_Usuario FROM '/home/edwar/usb/bases-mafer/sistema-subasta/metodo_pago_usuario.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Producto FROM '/home/edwar/usb/bases-mafer/sistema-subasta/producto.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Categoria_Producto FROM '/home/edwar/usb/bases-mafer/sistema-subasta/categoria_producto.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Subasta FROM '/home/edwar/usb/bases-mafer/sistema-subasta/subasta.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Bid FROM '/home/edwar/usb/bases-mafer/sistema-subasta/bid.csv' WITH DELIMITER ',' CSV HEADER;
 
 -- TODO: TRIGGERS
 -- 
