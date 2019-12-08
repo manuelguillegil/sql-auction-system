@@ -43,3 +43,33 @@ FROM (
 WHERE b.total < a.average_category;
 
 
+
+--- Stored Procedure 
+--- Este Store Procedure tiene la funcion que cuando el administrador sospecha de un bid fraudalento 
+--  entonces dado ese id, decide eliminarlo haciendo un llamado a undolastbid()
+--- Con este Stored Procedure respondemos a la pregunta numero 2 del proyecto.
+--- Se hace un llamado para eliminar el bid cuyo id es "1" para efectos de una prueba
+--- ya que el procedimiento se activa cuando el administrador asi lo desea
+
+DROP PROCEDURE IF EXISTS undolastbid(integer);
+
+CREATE OR REPLACE PROCEDURE undoLastBid(idToEliminate integer)
+LANGUAGE plpgsql
+AS $$
+    BEGIN
+
+    DELETE FROM Bid as b
+    WHERE b.id = idToEliminate;
+
+    RAISE NOTICE 'Se elimino el bid cuyo id es: %', idToEliminate;
+ 
+    COMMIT;
+    
+    END;
+$$;
+
+CALL undoLastBid(1);
+
+-- Para responder la pregunta #1 sobre los controles de concurrencia, manejador, etc...
+-- Dichas funcionalidades se encuentran en los triggers implementados despues de crear la base de datos,
+-- lo que permite consistencia en el manejo de nuestro sistema de base de datos
