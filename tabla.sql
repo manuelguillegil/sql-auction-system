@@ -143,19 +143,14 @@ ALTER TABLE Bid
     REFERENCES Usuario(id)
     ON DELETE SET NULL; 
 
-\i '/home/manuelguillegil/Development/auction-system/triggersAddBid.sql'
-\i '/home/manuelguillegil/Development/auction-system/triggersCheckHoja.sql'
-\i '/home/manuelguillegil/Development/auction-system/triggersUpdateHojaPadre.sql'
-\i '/home/manuelguillegil/Development/auction-system/triggerUpdateFinishDate.sql'
-
-\COPY Usuario FROM '/home/manuelguillegil/Development/auction-system/usuarios.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Categoria FROM '/home/manuelguillegil/Development/auction-system/categoria.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Metodo_Pago FROM '/home/manuelguillegil/Development/auction-system/metodo_pago.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Metodo_Pago_Usuario FROM '/home/manuelguillegil/Development/auction-system/metodo_pago_usuario.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Producto FROM '/home/manuelguillegil/Development/auction-system/producto.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Categoria_Producto FROM '/home/manuelguillegil/Development/auction-system/categoria_producto.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Subasta FROM '/home/manuelguillegil/Development/auction-system/subasta.csv' WITH DELIMITER ',' CSV HEADER;
-\COPY Bid FROM '/home/manuelguillegil/Development/auction-system/bid.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Usuario FROM 'usuarios.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Categoria FROM 'categoria.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Metodo_Pago FROM 'metodo_pago.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Metodo_Pago_Usuario FROM 'metodo_pago_usuario.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Producto FROM 'producto.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Categoria_Producto FROM 'categoria_producto.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Subasta FROM 'subasta.csv' WITH DELIMITER ',' CSV HEADER;
+\COPY Bid FROM 'bid.csv' WITH DELIMITER ',' CSV HEADER;
 
 -- TODO: TRIGGERS
 -- 

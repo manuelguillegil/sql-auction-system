@@ -1,6 +1,31 @@
 id,nombre,descripcion,caracteristicas
-01, raqueta, raqueta de tenis, marca wilson
-02, pelota de tenis, pelota de tenis, 3 unidades
-03, balon futbol americano, N/A, N/A
-04, casco futbol americano, N/A, N/A
-05, balon de futbol playero, futbol de playa, N/A
+1,raqueta,raqueta de tenis,marca wilson
+2,pelota de tenis,pelota de tenis,3 unidades
+3,balon futbol americano,N/A,N/A
+4,casco futbol americano,N/A,N/A
+5,balon de futbol playero,futbol de playa,N/A
+6,Shampoo,limpieza capilar,Head&Shoulder
+7,Acondicionador,enjuague capilar,Head&Shoulder
+8,Jabon Dove,limpieza corporal,Dove
+9,Ose de peluche,juguete para los pequenos de la casa,100% algodon
+10,Gatarina,Comida para gatos menores a 1 año,Catarina
+11,Jabon Palmolive,limpieza corporal,Sin olor
+12,Woody,Juguete toy story,disney
+13,Bobsponja,juguete nickelodion,nick
+14,Vestido CH,vestido original de carolina herrera,solo color negro
+15,Zapatos NB,zapatos deportivos new balance,solo talla 7
+16,Sueter BB,sueter que uso Bad Bunny en concierto,original
+17,Vestido CC,Vestido coco chanel,5 disponible
+18,Simba,juguete del rey leon,fun size
+19,Shampoo,limpieza capilar,Cabellos pintados
+20,Acondicionador,enjuague capilar,Cabello maltratado
+21,Cartera Gucci,cartera blanca con puntos azules,edicion limitada
+22,Dori,Juguete de buscando a nemo,N/A
+23,pelota de tenis,pelota de tenis firmada por rafa nadal,wilsol
+24,Ugly sueter,sueter caluroso de navidad,solo tallas grandes
+25,pinocho,juguete pinocho de madera,mayores de 6
+26,Pulcera de oro,accesorio ,banado en horo
+27,collar de CH,Accesorio de carolina herrera,banado en plata
+28,Maple,syrop para las panquecas,solo 5
+29,televisor samsung,televisor hg samsung,color azul
+30,Iphibe 5,telefono inteligente,64 gb
