@@ -1,6 +1,23 @@
 id,tipo,padre,es_hoja
-01,Deporte,, 0
-02, Futbol, 01, 1
-03, Futbol Americano, 02, 1
-04, Futbol de Playa, 02, 0
-05, Tenis,01,0
+1,Deporte,,0
+2,Futbol,1,0
+3,Futbol Americano,2,1
+4,Futbol de Playa,2,1
+5,Tenis,1,1
+6,Ropa,,0
+7,Ropa Mujer,6,0
+8,Vestido,7,1
+9,Zapatos,7,1
+10,Sueter,7,1
+11,Ropa Hombre,6,0
+12,Zapatos,11,1
+13,Sueter,11,1
+14,Accesorios,,0
+15,Pulcera,14,1
+16,Collar,14,1
+17,Electronicos,,0
+18,Televisor,17,1
+19,Telefono,17,1
+20,Comida,,0
+21,Humano,20,1
+22,Animales,20,1
