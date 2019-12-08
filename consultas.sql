@@ -7,19 +7,3 @@ SELECT date_trunc('month', b.fecha) AS mes, COUNT(ca.categoria), c.tipo
     GROUP BY 1, c.tipo;
 
 
-DROP PROCEDURE IF EXISTS undolastbid(integer);
-
-CREATE OR REPLACE PROCEDURE undoLastBid(idToEliminate integer)
-LANGUAGE plpgsql
-AS $$
-    BEGIN
-
-    DELETE FROM Bid as b
-    WHERE b.id = idToEliminate;
- 
-    COMMIT;
-    
-    END;
-$$;
-
-CALL undoLastBid(1);
