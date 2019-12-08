@@ -75,9 +75,9 @@ CREATE TABLE Subasta (
     usuario             Integer,
     fecha_ini           Timestamp,
     fecha_fin           Timestamp,
-    precio_base         Integer,
-    precio_reserva      Integer, 
-    precio_actual       Integer,
+    precio_base         Float,
+    precio_reserva      Float, 
+    precio_actual       Float,
     producto            Integer,
     monto_minimo        Integer, -- Atributo que define el monto minimo que debe tener un bid para aumentar un precio
     fecha_limite        INTERVAL -- Atributo que define el límite a considerar para actualizar la fecha de finalizacion de la subasta
